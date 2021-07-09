@@ -1,0 +1,38 @@
+jenkins:
+  quietPeriod: 0
+  systemMessage: "Controller configured using CloudBees CI Base Configuration Bundle"
+  projectNamingStrategy:
+    pattern:
+      description: "All project (job) names must be alphanumeric, lower case, may contain dashes/underscores and contain\
+        \ no spaces with a limit of 30 characters and a minimum of 4 characters."
+      forceExistingJobs: false
+      namePattern: "^[a-z0-9-_]{4,30}$"
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+    - simpleBuildDiscarder:
+        discarder:
+          logRotator:
+            numToKeepStr: "5"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleOnOver
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: PERFORMANCE_OPTIMIZED
+  globallibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "pipeline-library"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              credentialsId: "cloudbees-ci-workshop-github-app"
+              repoOwner: "cbci-casc-workshop"
+              repository: "pipeline-library"
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 2400
