@@ -1,12 +1,16 @@
 jenkins:
-  quietPeriod: 0
-  systemMessage: "Controller configured using CloudBees CI Base Configuration Bundle"
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
+  numExecutors: 0
   projectNamingStrategy:
     pattern:
       description: "All project (job) names must be alphanumeric, lower case, may contain dashes/underscores and contain\
         \ no spaces with a limit of 30 characters and a minimum of 4 characters."
       forceExistingJobs: false
       namePattern: "^[a-z0-9-_]{4,30}$"
+  quietPeriod: 0
+  systemMessage: "Controller configured using CloudBees CI Base Configuration Bundle"
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
@@ -15,6 +19,8 @@ unclassified:
         discarder:
           logRotator:
             numToKeepStr: "5"
+  cloudBeesSCMReporting:
+    enabled: true
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleOnOver
   globalDefaultFlowDurabilityLevel:
