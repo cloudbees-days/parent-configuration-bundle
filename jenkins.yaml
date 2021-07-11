@@ -36,6 +36,14 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "cbci-casc-workshop"
               repository: "pipeline-library"
+cloudbees-pipeline-policies:
+  config:
+    policies:
+    - action: "fail"
+      name: "Timeout policy"
+      rules:
+      - entirePipelineTimeoutRule:
+          maxTime: 30
   hibernationConfiguration:
     activities:
     - "build"
