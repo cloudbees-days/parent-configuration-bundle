@@ -25,6 +25,12 @@ unclassified:
     apiRateLimitChecker: ThrottleOnOver
   globalDefaultFlowDurabilityLevel:
     durabilityHint: PERFORMANCE_OPTIMIZED
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 2400
 cloudbees-pipeline-policies:
   config:
     policies:
@@ -33,9 +39,14 @@ cloudbees-pipeline-policies:
       rules:
       - entirePipelineTimeoutRule:
           maxTime: 30
-  hibernationConfiguration:
-    activities:
-    - "build"
-    - "web"
-    enabled: true
-    gracePeriod: 2400
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
