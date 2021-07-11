@@ -25,17 +25,6 @@ unclassified:
     apiRateLimitChecker: ThrottleOnOver
   globalDefaultFlowDurabilityLevel:
     durabilityHint: PERFORMANCE_OPTIMIZED
-  globallibraries:
-    libraries:
-    - defaultVersion: "main"
-      name: "pipeline-library"
-      retriever:
-        modernSCM:
-          scm:
-            github:
-              credentialsId: "cloudbees-ci-workshop-github-app"
-              repoOwner: "cbci-casc-workshop"
-              repository: "pipeline-library"
 cloudbees-pipeline-policies:
   config:
     policies:
