@@ -5,5 +5,5 @@ version: '1'
 configurations:
 - description: Workshop Additional Plugins
   includePlugins:
-    cloudbees-prometheus: {version: 1.0}
-    pipeline-utility-steps: {version: 2.7.1}
+    cloudbees-prometheus: {version: '1.0'}
+    pipeline-utility-steps: {version: '2.8.0'}
