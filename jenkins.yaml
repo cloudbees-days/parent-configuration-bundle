@@ -31,14 +31,6 @@ unclassified:
     - "web"
     enabled: true
     gracePeriod: 2400
-cloudbees-pipeline-policies:
-  config:
-    policies:
-    - action: "fail"
-      name: "Timeout policy"
-      rules:
-      - entirePipelineTimeoutRule:
-          maxTime: 30
 beekeeper:
   enabled: true
   securityWarnings:
