@@ -10,7 +10,7 @@ jenkins:
       forceExistingJobs: false
       namePattern: "^[a-z0-9-_]{4,30}$"
   quietPeriod: 0
-  systemMessage: "Controller configured using CloudBees CI Base Configuration Bundle Cambio 3:50 Chile"
+  systemMessage: "Controller configured using CloudBees CI Base Configuration Bundle"
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
